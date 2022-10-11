@@ -29,13 +29,12 @@ export default function updateInteractiveList(lists) {
       if (checkbox.checked) {
         elt.remove();
       }
-
-      for (let index = 0; index < toDoList.length; index += 1) {
-        if (toDoList[index].completed === true) {
+        toDoList.forEach((element, index) => {        
+        if (element.completed === true) {
           toDoList.splice(index, 1);
           localStorage.setItem('toDoList', JSON.stringify(toDoList));
         }
-      }
+      });
     });
   });
 }

@@ -52,18 +52,18 @@ export const removeTask = (lists) => {
       elt.lastElementChild.classList = 'fa fa-trash';
     });
   });
-  for (let i = 0; i < lists.length; i += 1) {
-    lists[i].lastElementChild.addEventListener('click', () => {
+    lists.forEach(element => {
+      element.lastElementChild.addEventListener('click', () => {
       toDoList.forEach((list) => {
-        if (list.index === Number(lists[i].id)) {
+        if (list.index === Number(element.id)) {
           const index = toDoList.indexOf(list);
           toDoList.splice(index, 1);
           localStorage.setItem('toDoList', JSON.stringify(toDoList));
         }
       });
-      lists[i].remove();
+      element.remove();
     });
-  }
+  });
 };
 
 export const update = (lists) => {
