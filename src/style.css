@@ -1,0 +1,130 @@
+body {
+  font-family: Tahoma, sans-serif;
+  background: #f6f6f6;
+  font-weight: 250;
+  color: rgba(0, 0, 0, 0.671);
+}
+
+.main-title {
+  text-align: center;
+  font-weight: 100;
+}
+
+.container {
+  background: white;
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 2px #3b3b3b2d;
+}
+
+.list {
+  border-bottom: 1.3px solid #cccccd6c;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.fa {
+  display: flex;
+  color: #c1c1c3;
+  align-items: center;
+}
+
+#text-input {
+  width: 90%;
+  border: none;
+  font-style: italic;
+  font-size: medium;
+  color: rgba(0, 0, 0, 0.546);
+}
+
+input:focus {
+  outline: none;
+}
+
+.list-check {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  width: 94%;
+}
+
+.list-check:nth-child(1) {
+  color: rgba(0, 0, 0, 0.589);
+}
+
+.checkbox {
+  width: 20px;
+  color: #c1c1c38a;
+  margin: 0;
+}
+
+.checkbox:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.ul-lists {
+  margin: 0;
+  padding: 0;
+}
+
+.fa-refresh,
+.fa-plus {
+  cursor: pointer;
+}
+
+.fa-ellipsis-v {
+  cursor: move;
+  margin-right: 9px;
+}
+
+.fa-trash {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.fa:hover {
+  color: black;
+}
+
+.button {
+  border: none;
+  height: 50px;
+  font-weight: 50;
+  margin: 0;
+  width: 100%;
+  font-size: medium;
+  color: rgba(0, 0, 0, 0.562);
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.add-items-btn {
+  background: none;
+  border: none;
+}
+
+.fa-refresh {
+  padding-right: 6px;
+}
+
+.para-input {
+  border: none;
+  width: 100%;
+  margin: 0;
+  font-size: medium;
+  color: rgba(0, 0, 0, 0.578);
+}
