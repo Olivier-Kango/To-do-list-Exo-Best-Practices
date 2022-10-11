@@ -52,8 +52,8 @@ export const removeTask = (lists) => {
       elt.lastElementChild.classList = 'fa fa-trash';
     });
   });
-    lists.forEach(element => {
-      element.lastElementChild.addEventListener('click', () => {
+  lists.forEach((element) => {
+    element.lastElementChild.addEventListener('click', () => {
       toDoList.forEach((list) => {
         if (list.index === Number(element.id)) {
           const index = toDoList.indexOf(list);

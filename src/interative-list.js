@@ -29,7 +29,7 @@ export default function updateInteractiveList(lists) {
       if (checkbox.checked) {
         elt.remove();
       }
-        toDoList.forEach((element, index) => {        
+      toDoList.forEach((element, index) => {        
         if (element.completed === true) {
           toDoList.splice(index, 1);
           localStorage.setItem('toDoList', JSON.stringify(toDoList));
