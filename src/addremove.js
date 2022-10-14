@@ -1,8 +1,8 @@
-export const toDoList = JSON.parse(localStorage.getItem('toDoList')) || [];
+const toDoList = JSON.parse(localStorage.getItem('toDoList')) || [];
 
 let index = toDoList.length;
 
-export const generateElement = (index, completed, description) => {
+const generateElement = (index, completed, description) => {
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
@@ -28,7 +28,7 @@ export const generateElement = (index, completed, description) => {
   list.appendChild(ellipsis);
 };
 
-export const addItem = (description, completed) => {
+const addItem = (description, completed) => {
   const item = { description, index, completed };
   if (description !== '') {
     index += 1;
@@ -39,7 +39,7 @@ export const addItem = (description, completed) => {
   }
 };
 
-export const removeTask = (lists) => {
+const removeTask = (lists) => {
   lists.forEach((elt) => {
     elt.addEventListener('click', () => {
       lists.forEach((elt2) => {
@@ -66,7 +66,7 @@ export const removeTask = (lists) => {
   });
 };
 
-export const update = (lists) => {
+const update = (lists) => {
   lists.forEach((elt) => {
     const input = elt.querySelector('span').querySelector('.para-input');
 
@@ -80,4 +80,8 @@ export const update = (lists) => {
       });
     });
   });
+};
+
+module.exports = {
+  addItem, update, removeTask, generateElement,
 };

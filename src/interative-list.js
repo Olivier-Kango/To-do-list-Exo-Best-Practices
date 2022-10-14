@@ -1,5 +1,4 @@
-import { toDoList } from './addremove.js';
-
+const toDoList = JSON.parse(localStorage.getItem('toDoList')) || [];
 export default function updateInteractiveList(lists) {
   lists.forEach((elt) => {
     const checkbox = elt.querySelector('span').querySelector('.checkbox');
